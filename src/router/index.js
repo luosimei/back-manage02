@@ -3,6 +3,8 @@ import Router from 'vue-router'
 
 import login from '@/pages/login'
 import index from '@/pages/index'
+import userList from '@/pages/userList'
+import home from '@/pages/home'
 
 
 Vue.use(Router);
@@ -14,13 +16,23 @@ Vue.use(Router);
 };*/
 const routes =  [
   {
-    path: '/',
-    name: 'login',
-    component: login
+      path: '/',
+      name: 'login',
+      component: login
   },{
-    path:'/index',
-    name:'index',
-    component:index
+      path:'/index',
+      name:'index',
+      component:index,
+      children:[{
+         path:'',
+         component:home,
+         meta:[]
+      },{
+         path:'/userList',
+         component:userList,
+         meta:['项目管理','用户列表']
+      }]
+
   }
 ];
 

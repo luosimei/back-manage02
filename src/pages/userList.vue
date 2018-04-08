@@ -1,12 +1,17 @@
 <template>
     <div id="userList">
-        <div>this is template body</div>
+        <bread-crumb></bread-crumb>
+        <div>this is userList body</div>
     </div>
 </template>
 
 <script>
+    import breadCrumb from '@/components/breadCrumb'
     export default{
         name:"userList",
+        components:{
+            breadCrumb
+        },
         data(){
             return {
                 msg: 'hello vue'
