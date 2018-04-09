@@ -1,5 +1,5 @@
 <template>
-  <div class="index  fillcontain">
+  <div class="index menu">
 
       <!--s:header-->
       <header-top></header-top>
@@ -9,7 +9,7 @@
       <el-row style="height: 100%;">
           <!--1. s:menu left-->
           <el-col :span="4" style="min-height:100%;height:auto;background-color: #324057;">
-              <el-menu default-active="2" style="min-height: 100%;" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" router>
+              <el-menu default-active="2" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" router>
                   <el-menu-item index="index">首页</el-menu-item>
 
                   <el-submenu index="2">
@@ -32,7 +32,7 @@
           <!--1.e:menu left-->
 
           <!--2. s:memu content-->
-          <el-col :span="20" style="height:100%;overflow-y: auto;">
+          <el-col :span="20" style="height:100%;overflow-y: auto;padding:0 20px 20px 20px;">
               <router-view></router-view>
           </el-col>
           <!--2. e:memu content-->
@@ -63,5 +63,16 @@
        },
     }
 </script>
+
+<style>
+    .menu{
+        position: absolute;
+        top:60px;
+        left:0;
+        right:0;
+        bottom:0;
+        z-index: 2;
+    }
+</style>
 
 
